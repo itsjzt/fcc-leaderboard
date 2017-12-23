@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
   /* CSS variables */
   --pink: #ff6978;
-  --darkgey: #454545;
+  --darkgrey: #454545;
   --lightgrey: #454545;
   --whiteIsh: #f3f5f7;
 `
