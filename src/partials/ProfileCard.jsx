@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Card = styled.div`
   border: solid 1px #ccc;
-  background: #fff;
+  background: var(--whiteIsh);
   border-radius: 5px;
   width: 250px;
   margin: 12px;
@@ -19,7 +19,7 @@ const Text = styled.div`
   padding: 8px;
   text-align: center;
   background: inherit;
-  color: #454545;
+  color: var(--darkgrey);
 `
 
 const PointsDiv = styled.div`
@@ -36,13 +36,13 @@ const Points = styled.span`
 const Time = styled.div`
   text-align: center;
   font-size: 80%;
-  color: #787878;
+  color: var(--lightgrey);
 `
 
 const Value = styled.div`
   text-align: center;
   font-size: 120%;
-  color: palevioletred;
+  color: var(--pink);
 `
 
 const ProfileCard = (props) => {

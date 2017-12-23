@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 `
 
 const Heading = styled.h1`
-  color: #ff6978;
+  color: var(--pink);
   font-size: 2.5rem;
   font-weight: 300;
   text-align: center;
@@ -39,9 +39,9 @@ const Header = (props) => {
         <Small> Leader Board </Small>
       </Heading>
       <Selector>
-        <Radio id='30Days' type='radio' />
+        <Radio name='sortByTime' value='30Days' id='30Days' type='radio' />
         <Label for='30Days' > Last 30 Days  </Label>
-        <Radio id='allTime' type='radio' />
+        <Radio name='sortByTime' value='allTime' id='allTime' type='radio' />
         <Label for='allTime' > All time </Label>
       </Selector>
     </Wrapper>
