@@ -8,3 +8,90 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.app_wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  /* CSS variables */
+  --pink: #ff6978;
+  --darkgrey: #454545;
+  --lightgrey: #454545;
+  --whiteIsh: #f3f5f7;
+}
+
+/* pr0file card CSS */
+.card {
+  border: solid 1px #ccc;
+  background: var(--whiteIsh);
+  border-radius: 5px;
+  width: 250px;
+  margin: 12px;
+  font-size: 16px;
+}
+
+.card_img {
+  width: 100%;
+  border: 0;
+}
+
+.card_name {
+  padding: 8px;
+  text-align: center;
+  background: inherit;
+  color: var(--darkgrey);
+}
+
+.card_points_tab {
+  display: flex;
+  justify-content: flex-start;
+  margin: 8px;
+}
+
+.card_points {
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.card_points_time {
+  text-align: center;
+  font-size: 80%;
+  color: var(--lightgrey);
+}
+
+.card_points_value {
+  text-align: center;
+  font-size: 120%;
+  color: var(--pink);
+}
+
+/* profile card CSS ended */
+
+/* Header CSS */
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_tagline {
+  color: var(--pink);
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+}
+
+.header_small {
+  font-size: 75%;
+}
+
+.header_selector {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.header_label {
+  font-size: 90%;
+  margin-right: 16px;
+}
+
+/* header CSS ended */
