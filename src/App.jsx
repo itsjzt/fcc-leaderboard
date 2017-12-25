@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import ProfileCard from './partials/ProfileCard'
+import AllProfiles from './partials/AllProfiles'
 import Header from './partials/Header'
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     this.state = {
       last30DaysStat: {},
       allTimeStat: {},
-      activeView: 'last30DaysStat'
+      activeView: '0'
     }
   }
 
@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <div className='app_wrapper'>
         <Header />
-        <ProfileCard user={this.state.allTimeStat[0] } />
+        <AllProfiles users={ [{username: 'Saurabh Sharma', img: 'https://reactarmory.com/james.jpg'}] } />
       </div>
     )
   }

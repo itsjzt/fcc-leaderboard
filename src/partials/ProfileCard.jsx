@@ -3,8 +3,8 @@ import React from 'react'
 const ProfileCard = (props) =>  {
   return (
     <div className='card'>
-      <img className='card_img' src={'https://reactarmory.com/james.jpg'} alt='lorem' />
-      <div className='card_name'> {`Lorem User`} </div>
+      <img className='card_img' src={props.user.img} alt={ `${props.user.username}'s pic` } />
+      <div className='card_name'> {props.user.username} </div>
       <div className='card_points_tab'>
         <div className='card_points'>
           <div className='card_points_time'>Last 30 Days</div>
