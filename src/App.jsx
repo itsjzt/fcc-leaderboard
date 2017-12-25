@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import AllProfiles from './partials/AllProfiles'
 import Header from './partials/Header'
+import Footer from './partials/Footer'
 
 class App extends Component {
   constructor() {
@@ -39,6 +40,7 @@ class App extends Component {
         ? <AllProfiles users={ this.state.allTimeStat } />
         : <AllProfiles users={ this.state.last30DaysStat } />
         }
+        <Footer />
       </div>
     )
   }
