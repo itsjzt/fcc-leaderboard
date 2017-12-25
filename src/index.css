@@ -1,4 +1,5 @@
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
@@ -10,12 +11,12 @@ body {
 }
 
 .app_wrapper {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   /* CSS variables */
   --pink: #ff6978;
   --darkgrey: #454545;
-  --lightgrey: #454545;
+  --lightgrey: #ababab;
   --whiteIsh: #f3f5f7;
 }
 
@@ -85,13 +86,64 @@ body {
 }
 
 .header_selector {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
+  margin: 12px;
 }
 
-.header_label {
-  font-size: 90%;
-  margin-right: 16px;
+/* checkbox switch */
+.form_label {
+  position: relative;
+  width: 60px;
+  height: 25px;
+  background: var(--whiteIsh);
+  border-radius: 1rem;
+  cursor: pointer;
 }
+
+.form_label:after {
+  content: 'All time';
+  position: absolute;
+  right: -70px;
+}
+
+.form_label:before {
+  content: 'Last 30 days';
+  position: absolute;
+  left: -100px;
+}
+
+.form_label .form_checkbox {
+  visibility: hidden;
+}
+
+.form_label .form_slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--pink);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form_label:hover {
+  box-shadow: 1px 1px 2px var(--lightgrey);
+}
+
+input:checked + .form_slider {
+  transform: translateX(100%)
+}
+
 
 /* header CSS ended */
+
+/* profile wrapper */
+.profiles_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  max-width: 860px;
+}

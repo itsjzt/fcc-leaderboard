@@ -7,9 +7,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      last30DaysStat: {},
-      allTimeStat: {},
-      activeView: '0'
+      last30DaysStat: [],
+      allTimeStat: [],
+      activeView: false
     }
   }
 
@@ -25,11 +25,20 @@ class App extends Component {
     .catch(err => console.error(err))
   }
 
+  onToggle(e) {
+    this.setState( (prevState, state) => {
+      return { activeView: !prevState.activeView }
+    })
+  }
+
   render() {
     return (
       <div className='app_wrapper'>
-        <Header />
-        <AllProfiles users={ [{username: 'Saurabh Sharma', img: 'https://reactarmory.com/james.jpg'}] } />
+        <Header checked={this.state.activeView} onchange={this.onToggle.bind(this)} />
+        { this.state.activeView
+        ? <AllProfiles users={ this.state.allTimeStat } />
+        : <AllProfiles users={ this.state.last30DaysStat } />
+        }
       </div>
     )
   }
